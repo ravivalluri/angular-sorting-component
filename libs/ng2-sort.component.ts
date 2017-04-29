@@ -13,6 +13,7 @@ export class Ng2SortComponent implements OnChanges {
     @Input('defaultSortingValue') selectedSortingValue: SortingValue;
     @Input() sortingValues: SortingValue[];
     @Input() dataToSort: any;
+    @Input() customClasses: string;
 
     constructor(private sortService: Ng2SortService) { }
 

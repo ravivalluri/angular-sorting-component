@@ -1,8 +1,14 @@
 {
-  "name": "ng2-sort-component",
-  "version": "1.0.0",
-  "description": "Simple reusable sorting component for Angular 2+",
-  "main": "index.js",
+  "name": "angular-sorting-component",
+  "version": "0.1.0-Beta",
+  "description": "Angular 2+ Sorting Component",
+  "main": "dist/angular-sorting-component.umd.js",
+  "jsnext:main": "dist/angular-sorting-component.js",
+  "module": "dist/angular-sorting-component.js",
+  "types": "dist/angular-sorting-component.d.ts",
+  "directories": {
+    "example": "example"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,17 +16,37 @@
     "type": "git",
     "url": "git+https://github.com/SerDiuK/ng2-sort-component.git"
   },
-  "keywords": [
-    "angular",
-    "sorting",
-    "component",
-    "orderby",
-    "observable"
-  ],
   "author": "Thomas Goethals",
   "license": "MIT",
+  "keywords": [
+    "ng",
+    "angular",
+    "ng2",
+    "angular2",
+    "sort",
+    "ng2-sort",
+    "ng2-sort-component",
+    "sorting",
+    "sorting component",
+    "ng2 sorting component",
+    "angular 2 sorting component"
+  ],
   "bugs": {
     "url": "https://github.com/SerDiuK/ng2-sort-component/issues"
   },
-  "homepage": "https://github.com/SerDiuK/ng2-sort-component#readme"
+  "homepage": "https://github.com/SerDiuK/ng2-sort-component#readme",
+  "devDependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "core-js": "^2.4.1",
+    "rollup": "^0.41.6",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
 }
