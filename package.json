@@ -10,7 +10,10 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "./node_modules/.bin/rollup -c rollup.config.js dist/ng2-sort.module.js -o dist/angular-sorting-component.umd.js",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc && npm run rollup"
   },
   "repository": {
     "type": "git",
@@ -38,15 +41,23 @@
   "devDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "codelyzer": "^3.0.1",
+    "concurrently": "^3.4.0",
     "core-js": "^2.4.1",
+    "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^1.0.2",
     "rxjs": "^5.1.0",
+    "typescript": "^2.3.2",
     "zone.js": "^0.8.4"
   }
 }
