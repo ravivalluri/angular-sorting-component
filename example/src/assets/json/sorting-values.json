@@ -1,0 +1,8 @@
+[
+    {"value" : "appName", "type" : "string", "label": "App Name"},
+    {"value" : "-appName", "type" : "string", "label": "App Name Reversed"},
+    {"value" : "releaseDate", "type" : "date", "label": "Release Date"},
+    {"value" : "-releaseDate", "type" : "date", "label": "Release Date Reversed"},
+    {"value" : "netWorth", "type" : "number", "label": "Net Worth"},
+    {"value" : "-netWorth", "type" : "number", "label": "Net Worth Reversed"}
+]

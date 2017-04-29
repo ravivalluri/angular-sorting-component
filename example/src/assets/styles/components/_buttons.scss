@@ -1,0 +1,14 @@
+// File Name: _buttons.scss
+// Description: specific styles for the buttons
+// Used by: Main.scss
+// Dependencies:
+
+.button {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.button-round {
+  border-radius: 50%;
+}
