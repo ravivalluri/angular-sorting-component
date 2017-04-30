@@ -5,8 +5,12 @@ import { SortingValue } from './SortingValue';
 @Component({
     // tslint:disable-next-line:component-selector
     selector: 'ng2-sort-component',
-    templateUrl: './ng2-sort.component.html',
-    styleUrls: ['./ng2-sort.component.scss'],
+    template: 
+    `
+    <select [(ngModel)]="selectedSortingValue" [ngClass]="customClasses" (change)="sortData()">
+        <option *ngFor="let sortingValue of sortingValues" [ngValue]="sortingValue">{{ sortingValue.label }}</option>
+    </select>
+    `
 })
 
 export class Ng2SortComponent implements OnChanges {

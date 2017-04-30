@@ -1,11 +1,11 @@
 {
   "name": "angular-sorting-component",
-  "version": "0.1.0-Beta",
+  "version": "0.1.2-Beta",
   "description": "Angular 2+ Sorting Component",
   "main": "dist/angular-sorting-component.umd.js",
-  "jsnext:main": "dist/angular-sorting-component.js",
-  "module": "dist/angular-sorting-component.js",
-  "types": "dist/angular-sorting-component.d.ts",
+  "jsnext:main": "dist/angular-sorting-component.umd.js",
+  "module": "dist/ng2-sort.module.js",
+  "types": "dist/ng2-sort.module.d.ts",
   "directories": {
     "example": "example"
   },
@@ -38,6 +38,10 @@
     "url": "https://github.com/SerDiuK/ng2-sort-component/issues"
   },
   "homepage": "https://github.com/SerDiuK/ng2-sort-component#readme",
+  "peerDependencies": {
+    "@angular/common": ">=2.0.0",
+    "@angular/core": ">=2.0.0"
+  },
   "devDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
