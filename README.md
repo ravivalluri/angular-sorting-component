@@ -27,9 +27,11 @@ The component needs the `dataToSort` and `sortingValues` directives to function.
 ```
 
 **dataToSort:** *Object[]*
+
 This is the instance that will be sorted.
 
 **sortingValues:** *SortingValue*
+
 Expects an array of values that will be sorted, the label that will be presented and their type.
 
 ```typescript
@@ -41,9 +43,11 @@ export interface SortingValue {
 ```
 #### Optional directives ####
 **customClasses:** *string*
+
 Add the classes that you want on the input field.
 
 **defaultSortingValue**: *string*
+
 If no default sorting value is chosen, the component will default to the first item in the sortingValue array.
 
 
