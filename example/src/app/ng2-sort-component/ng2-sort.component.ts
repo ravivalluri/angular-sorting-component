@@ -5,8 +5,12 @@ import { SortingValue } from './SortingValue';
 @Component({
     // tslint:disable-next-line:component-selector
     selector: 'ng2-sort-component',
-    templateUrl: './ng2-sort.component.html',
-    styleUrls: ['./ng2-sort.component.scss'],
+    template: 
+    `
+    <select [(ngModel)]="selectedSortingValue" [ngClass]="customClasses" (change)="sortData()">
+        <option *ngFor="let sortingValue of sortingValues" [ngValue]="sortingValue">{{ sortingValue.label }}</option>
+    </select>
+    `
 })
 
 export class Ng2SortComponent implements OnChanges {
@@ -22,9 +26,9 @@ export class Ng2SortComponent implements OnChanges {
     }
 
     ngOnChanges(): void {
-        if (this.selectedSortingValue) {
+        if (this.selectedSortingValue && this.dataToSort) {
             this.sortData(); // Trigger sort on component initialisation
-        } else if(this.selectedSortingValue === undefined && this.sortingValues) {
+        } else if(this.selectedSortingValue === undefined && this.sortingValues && this.dataToSort) {
             this.selectedSortingValue = this.sortingValues[0]; // If no default value is given, it will default to the first
             this.sortData();
         }

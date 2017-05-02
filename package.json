@@ -12,8 +12,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "./node_modules/.bin/rollup -c rollup.config.js dist/ng2-sort.module.js -o dist/angular-sorting-component.umd.js",
-    "clean": "rimraf dist",
-    "build": "npm run clean && tsc && npm run rollup"
+    "clean": "rimraf dist && npm cache clean",
+    "ngc": "./node_modules/.bin/ngc",
+    "build": "npm run clean && npm run ngc && npm run rollup",
+    "example": "rimraf example/src/app/ng2-sort-component"
   },
   "repository": {
     "type": "git",

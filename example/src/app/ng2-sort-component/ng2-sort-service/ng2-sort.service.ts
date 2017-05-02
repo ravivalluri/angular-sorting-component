@@ -8,21 +8,20 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Ng2SortService {
-    constructor(private http: Http) {
-
-    }
+    constructor(private http: Http) {}
 
     sortData(sortingValue: SortingValue, dataToSort: any): void {
         let reverseSortingOrder = false;
+        let sortingValueTemp = sortingValue.value;
 
-        if (sortingValue.value.indexOf('-') === 0) { // Check if the sortingValue is to be reversed
-            sortingValue.value = sortingValue.value.substr(1, sortingValue.value.length); // Remove the minus from the sortingValue
+        if (sortingValueTemp.indexOf('-') === 0) { // Check if the sortingValue is to be reversed
+            sortingValueTemp = sortingValueTemp.substr(1, sortingValueTemp.length); // Remove the minus from the sortingValue
             reverseSortingOrder = true;
         }
 
         dataToSort.sort((a: any, b: any) => { // Sort data regularly
-            let compareA = a[sortingValue.value]; // Without comparators the observables will be overwritten when manipulated
-            let compareB = b[sortingValue.value];
+            let compareA = a[sortingValueTemp]; // Without comparators the observables will be overwritten when manipulated
+            let compareB = b[sortingValueTemp];
 
             if (sortingValue.type === 'string') {
                 if (compareA) {
