@@ -1,15 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-
 import { SortingValue } from '../SortingValue';
 
-import { Observable } from 'rxjs/observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Ng2SortService {
-    constructor(private http: Http) {}
-
     sortData(sortingValue: SortingValue, dataToSort: any): void {
         let reverseSortingOrder = false;
         let sortingValueTemp = sortingValue.value;
@@ -22,6 +17,12 @@ export class Ng2SortService {
         dataToSort.sort((a: any, b: any) => { // Sort data regularly
             let compareA = a[sortingValueTemp]; // Without comparators the observables will be overwritten when manipulated
             let compareB = b[sortingValueTemp];
+
+            if (!compareA) { // if A is undefined, move it to bottom
+                return 1;
+            } else if (!compareB) { // if B is undefined move it to bottom
+                return -1;
+            }
 
             if (sortingValue.type === 'string') {
                 if (compareA) {
